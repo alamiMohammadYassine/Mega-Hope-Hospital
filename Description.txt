@@ -1,0 +1,1 @@
+This project handles everything a multidisciplinary hospital needs, using the most solid and universal technology specifications within a robust architecture.
