@@ -6,6 +6,12 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
+import com.onehealth.patientservice.entity.BloodType;
+import com.onehealth.patientservice.entity.Gender;
+import com.onehealth.patientservice.entity.EmergencyContact;
+import com.onehealth.patientservice.entity.MedicalHistory;
+import com.onehealth.patientservice.entity.PatientStatus;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -99,39 +105,5 @@ public class Patient {
     }
 }
 
-@Embeddable
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-class Address {
-    @Column(length = 200)
-    private String street;
 
-    @Column(length = 100)
-    private String city;
 
-    @Column(length = 100)
-    private String state;
-
-    @Column(length = 20)
-    private String zipCode;
-
-    @Column(length = 100)
-    private String country;
-}
-
-enum Gender {
-    MALE, FEMALE
-}
-
-enum BloodType {
-    A_POSITIVE, A_NEGATIVE,
-    B_POSITIVE, B_NEGATIVE,
-    AB_POSITIVE, AB_NEGATIVE,
-    O_POSITIVE, O_NEGATIVE
-}
-
-enum PatientStatus {
-    ACTIVE, INACTIVE, DECEASED
-}
