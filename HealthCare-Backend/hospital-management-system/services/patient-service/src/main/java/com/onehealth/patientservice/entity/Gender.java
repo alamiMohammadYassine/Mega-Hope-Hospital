@@ -1,6 +1,6 @@
 package com.onehealth.patientservice.entity;
 
 
-enum Gender {
+public enum Gender {
     MALE, FEMALE
 }

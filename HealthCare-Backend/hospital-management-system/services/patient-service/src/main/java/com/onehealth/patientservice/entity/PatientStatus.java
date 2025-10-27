@@ -1,6 +1,6 @@
 package com.onehealth.patientservice.entity;
 
 
-enum PatientStatus {
+public enum PatientStatus {
     ACTIVE, INACTIVE, DECEASED
 }
